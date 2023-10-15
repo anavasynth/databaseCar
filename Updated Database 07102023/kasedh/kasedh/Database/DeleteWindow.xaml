@@ -1,0 +1,35 @@
+﻿<Window x:Class="Database.DeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="DeleteWindow" Height="400" Width="480">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3C8DE8"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,31,0,-31">
+        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="69" Click="BackButton_Click" Margin="14,316,0,0"/>
+        <Button x:Name="DeleteObject" Content="Видалити з бази" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="DeleteObject_Click"/>
+
+        <ListView x:Name="carListViewDelete"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="95,3,94,216" RenderTransformOrigin="0.5,0.5">
+            <ListView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.368"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.777"/>
+                </TransformGroup>
+            </ListView.RenderTransform>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

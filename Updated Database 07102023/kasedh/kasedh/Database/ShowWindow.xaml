@@ -1,0 +1,47 @@
+﻿<Window x:Class="Database.ShowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="ShowWindow" Height="722" Width="720">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF6272F3" Offset="0.319"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Height="20
+                " Margin="31,635,0,0" VerticalAlignment="Top" Width="69" Click="BackButton_Click"/>
+        <Label Content="Тип транспорту" HorizontalAlignment="Left" Margin="95,519,0,0" VerticalAlignment="Top" Height="26" Width="96"/>
+        <ComboBox Name="vType" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="95,550,0,0" Background="White" Foreground="Black" BorderBrush="Black" Height="22">
+            <ComboBoxItem Content="Всі"/>
+            <ComboBoxItem Content="Легковий"/>
+            <ComboBoxItem Content="Вантажівка"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxKey" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,550,0,0" Background="Black" Foreground="Black" BorderBrush="Black" Height="22">
+            <ComboBoxItem Content="Пробіг"/>
+            <ComboBoxItem Content="Рік"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxType" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="465,550,0,0" Background="#FFBF4E4E" Foreground="Black" BorderBrush="Black" Height="22">
+            <ComboBoxItem Content="Зростання"/>
+            <ComboBoxItem Content="Спадання"/>
+        </ComboBox>
+        <Label Content="Ключ" HorizontalAlignment="Left" Margin="285,519,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+        <Label Content="Тип сортування" HorizontalAlignment="Left" Margin="464,519,0,0" VerticalAlignment="Top" Height="26" Width="96"/>
+        <Button x:Name="SortButton" Content="Фільтрувати та сортувати" HorizontalAlignment="Left" Margin="540,604,0,0" VerticalAlignment="Top" Height="41" Width="150" Click="SortButton_Click"/>
+        <Button x:Name="ShowDataButton" Content="Відобразити дані" HorizontalAlignment="Center" Margin="0,478,0,0" VerticalAlignment="Top" Height="35" Width="510" RenderTransformOrigin="1.457,2.737" Click="ShowDataButton_Click"/>
+        <ListView x:Name="carListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,14,105,241">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

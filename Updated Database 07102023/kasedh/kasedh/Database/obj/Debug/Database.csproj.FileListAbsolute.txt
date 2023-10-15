@@ -1,0 +1,131 @@
+C:\Users\gonch\source\repos\Database\Database\bin\Debug\Database.exe.config
+C:\Users\gonch\source\repos\Database\Database\bin\Debug\Database.exe
+C:\Users\gonch\source\repos\Database\Database\bin\Debug\Database.pdb
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\MainWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\App.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database_MarkupCompile.cache
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database_MarkupCompile.lref
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\MainWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.g.resources
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.Properties.Resources.resources
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.csproj.GenerateResource.cache
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.exe
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\Database.pdb
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\AddWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\AddWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\ShowWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\ShowWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\EditWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\GuideWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\EditWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\GuideWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\DeleteWindow.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\DeleteWindow.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\AddWin.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\AddWin.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\WindowADD.g.cs
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\windowADDDD.baml
+C:\Users\gonch\source\repos\Database\Database\obj\Debug\windowADDDD.g.cs
+C:\Users\itesl\Desktop\Database\bin\Debug\Database.exe.config
+C:\Users\itesl\Desktop\Database\bin\Debug\Database.exe
+C:\Users\itesl\Desktop\Database\bin\Debug\Database.pdb
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.csproj.SuggestedBindingRedirects.cache
+C:\Users\itesl\Desktop\Database\obj\Debug\AddWin.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\EditWindow.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\AddWin.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\DeleteWindow.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\EditWindow.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\GuideWindow.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\MainWindow.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\ShowWindow.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\App.g.cs
+C:\Users\itesl\Desktop\Database\obj\Debug\Database_MarkupCompile.cache
+C:\Users\itesl\Desktop\Database\obj\Debug\Database_MarkupCompile.lref
+C:\Users\itesl\Desktop\Database\obj\Debug\DeleteWindow.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\GuideWindow.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\MainWindow.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\ShowWindow.baml
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.g.resources
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.Properties.Resources.resources
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.csproj.GenerateResource.cache
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.exe
+C:\Users\itesl\Desktop\Database\obj\Debug\Database.pdb
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\bin\Debug\Database.exe.config
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\bin\Debug\Database.exe
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\bin\Debug\Database.pdb
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\EditWindow.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\AddWin.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\DeleteWindow.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\EditWindow.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\GuideWindow.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\MainWindow.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\ShowWindow.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\App.g.cs
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.cache
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.lref
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\AddWin.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\DeleteWindow.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\GuideWindow.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\MainWindow.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\ShowWindow.baml
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.g.resources
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.Properties.Resources.resources
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.csproj.GenerateResource.cache
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.exe
+C:\Users\gonch\Desktop\kasedh\kasedh\Database\obj\Debug\Database.pdb
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.exe.config
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.exe
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.pdb
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\EditWindow.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\AddWin.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\DeleteWindow.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\EditWindow.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\GuideWindow.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\MainWindow.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\ShowWindow.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\App.g.cs
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.cache
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.lref
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\AddWin.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\DeleteWindow.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\GuideWindow.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\MainWindow.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\ShowWindow.baml
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.g.resources
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.Properties.Resources.resources
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.GenerateResource.cache
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.exe
+C:\Users\gonch\Desktop\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.pdb
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.AssemblyReference.cache
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\EditWindow.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\AddWin.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\DeleteWindow.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\EditWindow.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\GuideWindow.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\MainWindow.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\ShowWindow.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\App.g.cs
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.cache
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database_MarkupCompile.lref
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.exe
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.pdb
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.exe.config
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.exe
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\bin\Debug\Database.pdb
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\AddWin.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\DeleteWindow.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\GuideWindow.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\MainWindow.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\ShowWindow.baml
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.g.resources
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.Properties.Resources.resources
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.GenerateResource.cache
+C:\Users\gonch\Desktop\OneMoreTime\Updated Database 07102023\kasedh\kasedh\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
