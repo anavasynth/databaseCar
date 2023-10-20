@@ -52,7 +52,7 @@
             <ComboBoxItem Content="Задній"/>
             <ComboBoxItem Content="Повний"/>
         </ComboBox>
-        <ComboBox x:Name="comboBoxWheels" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="450,174,0,0">
+        <ComboBox x:Name="numberOfAxlesComboBox" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="450,174,0,0">
             <ComboBoxItem Content="1"/>
             <ComboBoxItem Content="2"/>
             <ComboBoxItem Content="3"/>
@@ -61,7 +61,7 @@
         </ComboBox>
         <Label Content="Кількість осей" HorizontalAlignment="Left" Margin="447,148,0,0" VerticalAlignment="Top"/>
         <Label Content="Вантажопідйомність" HorizontalAlignment="Left" Margin="444,208,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_Копировать4" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="450,297,0,0">
+        <ComboBox x:Name="wheelFormulaComboBox" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="450,297,0,0">
             <ComboBoxItem Content="4х2"/>
             <ComboBoxItem Content="4х4"/>
             <ComboBoxItem Content="6х2"/>
@@ -70,7 +70,7 @@
             <ComboBoxItem Content="8х2"/>
         </ComboBox>
         <Label Content="Колісна формула" HorizontalAlignment="Left" Margin="445,271,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="448,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="22" />
+        <TextBox x:Name="payloadCapacityTextBox" HorizontalAlignment="Left" Margin="448,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="22" />
         <Label Content="Параметри тільки&#xA;  для вантажівок" HorizontalAlignment="Left" Margin="447,90,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="167" Height="54" FontStretch="Medium" FontSize="16"/>
         <Button x:Name="AddButton" Content="Редагувати" HorizontalAlignment="Left" Margin="467,454,0,0" VerticalAlignment="Top" Height="28" Width="126" RenderTransformOrigin="-0.152,0.276" Click="AddButton_Click"/>
         <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="469,421,0,0" VerticalAlignment="Top" Height="28" Width="124" RenderTransformOrigin="-0.152,0.276" Background="#FFF59A9A"/>

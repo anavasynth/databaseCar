@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -142,10 +144,6 @@ namespace Database
                         MessageBox.Show($"Введено некоректний пробіг");
                         pass = false;
                     }
-                    else
-                    {
-                        //year = int.Parse(yearTextBox.Text);
-                    }
                 }
                 catch (FormatException)
                 {
@@ -153,6 +151,51 @@ namespace Database
                     pass = false;
                 }
             }
+
+
+            string vehicleType = comboBoxType.Text;
+
+            if (vehicleType == "Вантажівка")
+            {
+
+                if (string.IsNullOrWhiteSpace(numberOfAxlesComboBox.Text))
+                {
+                    MessageBox.Show("Поле \"Кількість осей\" має бути заповненим");
+                    pass = false;
+                }
+                else if (string.IsNullOrWhiteSpace(wheelFormulaComboBox.Text))
+                {
+                    MessageBox.Show("Поле \"Колісна формула\" має бути заповненим");
+                    pass = false;
+                }
+
+                if (string.IsNullOrWhiteSpace(payloadCapacityTextBox.Text))
+                {
+                    MessageBox.Show("Поле \"Вантажопідйомність\" не може бути порожнім.");
+                    pass = false;
+                }
+                else if (payloadCapacityTextBox.Text != "")
+                {
+                    try
+                    {
+                        double payloadCapacity = double.Parse(payloadCapacityTextBox.Text);
+
+                        if (payloadCapacity < 0)
+                        {
+                            MessageBox.Show($"Введено некоректну вантожопідйомність");
+                            pass = false;
+                        }
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Введено некоректне значення");
+                        pass = false;
+                    }
+                }
+            }
+
+
+
             if (string.IsNullOrWhiteSpace(fuelTextBox.Text))
             {
                 fuelTextBox.Text = "Не вказано";

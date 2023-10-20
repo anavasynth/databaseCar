@@ -41,41 +41,75 @@ namespace Database
         {
           if (carListView.SelectedItem != null && CheckValues())
             {
-                Car selectedCar = (Car)carListView.SelectedItem;
+                
+                if (carListView.SelectedItem is Car selectedCar)
+                {
+                    string vehicleType = comboBoxType.Text;
+                    string brand = brandTextBox.Text;
+                    string model = modelTextBox.Text;
+                    string color = colorTextBox.Text;
+                    int year = int.Parse(yearTextBox.Text);
+                    double mileage = double.Parse(mileageTextBox.Text);
+                    string fuel = fuelTextBox.Text;
+                    string gearbox = gearboxComboBox.Text;
+                    string driveType = driveTypeComboBox.Text;
+                    double power = double.Parse(powerTextBox.Text);
 
-                // Отримайте нові дані з інтерфейсу користувача
-                string vehicleType = comboBoxType.Text;
-                string brand = brandTextBox.Text;
-                string model = modelTextBox.Text;
-                string color = colorTextBox.Text;
-                int year = int.Parse(yearTextBox.Text);
-                double mileage = double.Parse(mileageTextBox.Text);
-                string fuel = fuelTextBox.Text;
-                string gearbox = gearboxComboBox.Text;
-                string driveType = driveTypeComboBox.Text;
-                double power = double.Parse(powerTextBox.Text);
+                    Car newCar = new Car(vehicleType, brand, model, color, year, mileage, fuel, gearbox, driveType, power);
 
-                // Створіть новий об'єкт автомобіля з оновленими даними
-                Car newCar = new Car(vehicleType, brand, model, color, year, mileage, fuel, gearbox, driveType, power);
+                    carDatabase.EditVehicle(selectedCar, newCar);
 
-                // Викличте метод для редагування даних
-                carDatabase.EditVehicle(selectedCar, newCar);
+                    int selectedIndex = carListView.SelectedIndex;
+                    carsCollection[selectedIndex] = newCar;
 
-                // Оновіть інтерфейс користувача
-                int selectedIndex = carListView.SelectedIndex;
-                carsCollection[selectedIndex] = newCar;
+                    comboBoxType.SelectedItem = null;
+                    brandTextBox.Clear();
+                    modelTextBox.Clear();
+                    colorTextBox.Clear();
+                    yearTextBox.Clear();
+                    mileageTextBox.Clear();
+                    fuelTextBox.SelectedItem = null;
+                    gearboxComboBox.SelectedItem = null;
+                    driveTypeComboBox.SelectedItem = null;
+                    powerTextBox.Clear();
+                }
+                else if (carListView.SelectedItem is Lorry selectedLorry)
+                {
+                    string vehicleType = comboBoxType.Text;
+                    string brand = brandTextBox.Text;
+                    string model = modelTextBox.Text;
+                    string color = colorTextBox.Text;
+                    int year = int.Parse(yearTextBox.Text);
+                    double mileage = double.Parse(mileageTextBox.Text);
+                    string fuel = fuelTextBox.Text;
+                    string gearbox = gearboxComboBox.Text;
+                    string driveType = driveTypeComboBox.Text;
+                    double power = double.Parse(powerTextBox.Text);
+                    string numberOfAxles = numberOfAxlesComboBox.Text;
+                    double payloadCapacity = double.Parse(payloadCapacityTextBox.Text);
+                    string wheelFormula = wheelFormulaComboBox.Text;
+     
+                    Lorry newLorry = new Lorry(vehicleType, brand, model, color, year, mileage, fuel, gearbox, driveType, power, numberOfAxles, payloadCapacity, wheelFormula);
+                    
+                    carDatabase.EditVehicle(selectedLorry, newLorry);
 
-                // Очистіть текстові поля
-                comboBoxType.SelectedItem = null;
-                brandTextBox.Clear();
-                modelTextBox.Clear();
-                colorTextBox.Clear();
-                yearTextBox.Clear();
-                mileageTextBox.Clear();
-                fuelTextBox.SelectedItem = null;
-                gearboxComboBox.SelectedItem = null;
-                driveTypeComboBox.SelectedItem = null;
-                powerTextBox.Clear();
+                    int selectedIndex = carListView.SelectedIndex;
+                    carsCollection[selectedIndex] = newLorry;
+
+                    comboBoxType.SelectedItem = null;
+                    brandTextBox.Clear();
+                    modelTextBox.Clear();
+                    colorTextBox.Clear();
+                    yearTextBox.Clear();
+                    mileageTextBox.Clear();
+                    fuelTextBox.SelectedItem = null;
+                    gearboxComboBox.SelectedItem = null;
+                    driveTypeComboBox.SelectedItem = null;
+                    powerTextBox.Clear();
+                    numberOfAxlesComboBox.SelectedItem = null;
+                    payloadCapacityTextBox.Clear();
+                    wheelFormulaComboBox.SelectedItem = null;
+                }
             }
         }
 
@@ -145,10 +179,6 @@ namespace Database
                         MessageBox.Show($"Введено некоректний пробіг");
                         pass = false;
                     }
-                    else
-                    {
-                        //year = int.Parse(yearTextBox.Text);
-                    }
                 }
                 catch (FormatException)
                 {
@@ -156,6 +186,48 @@ namespace Database
                     pass = false;
                 }
             }
+
+            string vehicleType = comboBoxType.Text;
+
+            if (vehicleType == "Вантажівка")
+            {
+
+                if (string.IsNullOrWhiteSpace(numberOfAxlesComboBox.Text))
+                {
+                    MessageBox.Show("Поле \"Кількість осей\" має бути заповненим");
+                    pass = false;
+                }
+                else if (string.IsNullOrWhiteSpace(wheelFormulaComboBox.Text))
+                {
+                    MessageBox.Show("Поле \"Колісна формула\" має бути заповненим");
+                    pass = false;
+                }
+
+                if (string.IsNullOrWhiteSpace(payloadCapacityTextBox.Text))
+                {
+                    MessageBox.Show("Поле \"Вантажопідйомність\" не може бути порожнім.");
+                    pass = false;
+                }
+                else if (payloadCapacityTextBox.Text != "")
+                {
+                    try
+                    {
+                        double payloadCapacity = double.Parse(payloadCapacityTextBox.Text);
+
+                        if (payloadCapacity < 0)
+                        {
+                            MessageBox.Show($"Введено некоректну вантожопідйомність");
+                            pass = false;
+                        }
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Введено некоректне значення");
+                        pass = false;
+                    }
+                }
+            }
+
             if (string.IsNullOrWhiteSpace(fuelTextBox.Text))
             {
                 fuelTextBox.Text = "Не вказано";
@@ -195,26 +267,52 @@ namespace Database
             return pass;
         }
 
-        private void DisplayCarData(Car car)
+        private void DisplayCarData(Car vehicle)
         {
-            comboBoxType.Text = car.VehicleType;
-            brandTextBox.Text = car.Brand;
-            modelTextBox.Text = car.Model;
-            colorTextBox.Text = car.Color;
-            yearTextBox.Text = car.Year.ToString();
-            mileageTextBox.Text = car.Mileage.ToString();
-            fuelTextBox.Text = car.Fuel;
-            gearboxComboBox.Text = car.Gearbox;
-            driveTypeComboBox.Text = car.DriveType;
-            powerTextBox.Text = car.Power.ToString();
+            comboBoxType.Text = vehicle.VehicleType;
+            brandTextBox.Text = vehicle.Brand;
+            modelTextBox.Text = vehicle.Model;
+            colorTextBox.Text = vehicle.Color;
+            yearTextBox.Text = vehicle.Year.ToString();
+            mileageTextBox.Text = vehicle.Mileage.ToString();
+            fuelTextBox.Text = vehicle.Fuel;
+            gearboxComboBox.Text = vehicle.Gearbox;
+            driveTypeComboBox.Text = vehicle.DriveType;
+            powerTextBox.Text = vehicle.Power.ToString();
+        }
+
+        private void DisplayLorryData(Lorry vehicle)
+        {
+            comboBoxType.Text = vehicle.VehicleType;
+            brandTextBox.Text = vehicle.Brand;
+            modelTextBox.Text = vehicle.Model;
+            colorTextBox.Text = vehicle.Color;
+            yearTextBox.Text = vehicle.Year.ToString();
+            mileageTextBox.Text = vehicle.Mileage.ToString();
+            fuelTextBox.Text = vehicle.Fuel;
+            gearboxComboBox.Text = vehicle.Gearbox;
+            driveTypeComboBox.Text = vehicle.DriveType;
+            powerTextBox.Text = vehicle.Power.ToString();
+            numberOfAxlesComboBox.Text = vehicle.NumberOfAxles;
+            payloadCapacityTextBox.Text = vehicle.PayloadCapacity.ToString();
+            wheelFormulaComboBox.Text = vehicle.WheelFormula;
         }
 
         private void carListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            string vehicleType = comboBoxType.Text;
             if (carListView.SelectedItem != null)
             {
-                Car selectedCar = (Car)carListView.SelectedItem;
-                DisplayCarData(selectedCar);
+                if (carListView.SelectedItem is Car)
+                {
+                    Car selectedCar = (Car)carListView.SelectedItem;
+                    DisplayCarData(selectedCar);
+                }
+                else if (carListView.SelectedItem is Lorry)
+                {
+                    Lorry selectedLorry = (Lorry)carListView.SelectedItem;
+                    DisplayLorryData(selectedLorry);
+                }
             }
         }
 

@@ -226,7 +226,7 @@ namespace Database
 
         public override string GetVehicleInfo()
         {
-            return $"Vehicle type: {VehicleType}, {Year} {Brand} {Model}, Color: {Color}, Mileage: {Mileage}," +
+            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Color: {Color}, Mileage: {Mileage}," +
                    $" Number of Axles: {NumberOfAxles}, Payload Capacity: {PayloadCapacity}, Wheel Formula: {WheelFormula}";
         }
     }
