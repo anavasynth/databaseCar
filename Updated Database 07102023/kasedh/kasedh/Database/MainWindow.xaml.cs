@@ -285,9 +285,19 @@ namespace Database
             return vehicles.Where(car => car.Brand.Equals(brand, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
+        public List<Vehicle> SearchCarsByFuel(string fuel)
+        {
+            return vehicles.Where(car => car.Fuel.Equals(fuel, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
         public List<Vehicle> SearchCarsByType(string vehicleType)
         {
             return vehicles.Where(car => car.VehicleType.Equals(vehicleType, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
+        public List<Vehicle> SearchCarsByYearRange(int startYear, int endYear)
+        {
+            return vehicles.FindAll(car => car.Year >= startYear && car.Year <= endYear);
         }
 
         public void EditVehicle(Vehicle oldVehicle, Vehicle newVehicle)
@@ -427,8 +437,8 @@ namespace Database
                 Close();
             }
 
-              private void FindCar_Click(object sender, RoutedEventArgs e)
-              {
+            private void FindCar_Click(object sender, RoutedEventArgs e)
+            {
                   string brand = brandTextBox.Text;
 
                   if (!string.IsNullOrEmpty(brand))
@@ -436,7 +446,52 @@ namespace Database
                       List<Vehicle> searchResults = carDatabase.SearchCarsByBrand(brand);
                       searchResultListView.ItemsSource = searchResults;
                   }
-              }
+
+
         }
+        private void FindElectroCar_Click(object sender, RoutedEventArgs e)
+        {
+            string fuel = "Електро";
+
+            if (!string.IsNullOrEmpty(fuel))
+            {
+                List<Vehicle> searchResults = carDatabase.SearchCarsByFuel(fuel);
+                searchResultListView.ItemsSource = searchResults;
+            }
+        }
+
+        private void FindCarByYearRange_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int startYear, endYear;
+                int currentYear = DateTime.Now.Year;
+                if (int.TryParse(startYearT.Text, out startYear) && int.TryParse(endYearT.Text, out endYear))
+                {
+                    if (startYear < 1900 || startYear > currentYear || endYear < 1900 || endYear > currentYear)
+                    {
+                        MessageBox.Show($"Введено некоректний рік випуску. Рік має бути від 1900 до {currentYear}.");
+                    }
+                    else if (startYear <= endYear)
+                    {
+                        List<Vehicle> searchResults = carDatabase.SearchCarsByYearRange(startYear, endYear);
+                        searchResultListView.ItemsSource = searchResults;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Початковий рік не може бути більшим за кінцевий рік.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Невірний формат введеного року. Будь ласка, введіть ціле число.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Сталася помилка: " + ex.Message);
+            }
+        }
+    }
     
 }

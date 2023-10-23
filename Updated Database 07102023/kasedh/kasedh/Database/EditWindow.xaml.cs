@@ -42,7 +42,7 @@ namespace Database
           if (carListView.SelectedItem != null && CheckValues())
             {
                 
-                if (carListView.SelectedItem is Car selectedCar)
+                if (carListView.SelectedItem is Car selectedCar && CheckValues())
                 {
                     string vehicleType = comboBoxType.Text;
                     string brand = brandTextBox.Text;
@@ -62,18 +62,9 @@ namespace Database
                     int selectedIndex = carListView.SelectedIndex;
                     carsCollection[selectedIndex] = newCar;
 
-                    comboBoxType.SelectedItem = null;
-                    brandTextBox.Clear();
-                    modelTextBox.Clear();
-                    colorTextBox.Clear();
-                    yearTextBox.Clear();
-                    mileageTextBox.Clear();
-                    fuelTextBox.SelectedItem = null;
-                    gearboxComboBox.SelectedItem = null;
-                    driveTypeComboBox.SelectedItem = null;
-                    powerTextBox.Clear();
+                    ClearData();
                 }
-                else if (carListView.SelectedItem is Lorry selectedLorry)
+                else if (carListView.SelectedItem is Lorry selectedLorry && CheckValues())
                 {
                     string vehicleType = comboBoxType.Text;
                     string brand = brandTextBox.Text;
@@ -96,19 +87,7 @@ namespace Database
                     int selectedIndex = carListView.SelectedIndex;
                     carsCollection[selectedIndex] = newLorry;
 
-                    comboBoxType.SelectedItem = null;
-                    brandTextBox.Clear();
-                    modelTextBox.Clear();
-                    colorTextBox.Clear();
-                    yearTextBox.Clear();
-                    mileageTextBox.Clear();
-                    fuelTextBox.SelectedItem = null;
-                    gearboxComboBox.SelectedItem = null;
-                    driveTypeComboBox.SelectedItem = null;
-                    powerTextBox.Clear();
-                    numberOfAxlesComboBox.SelectedItem = null;
-                    payloadCapacityTextBox.Clear();
-                    wheelFormulaComboBox.SelectedItem = null;
+                    ClearData();
                 }
             }
         }
@@ -267,6 +246,23 @@ namespace Database
             return pass;
         }
 
+        private void ClearData()
+        {
+            comboBoxType.SelectedItem = null;
+            brandTextBox.Clear();
+            modelTextBox.Clear();
+            colorTextBox.Clear();
+            yearTextBox.Clear();
+            mileageTextBox.Clear();
+            fuelTextBox.SelectedItem = null;
+            gearboxComboBox.SelectedItem = null;
+            driveTypeComboBox.SelectedItem = null;
+            powerTextBox.Clear();
+            numberOfAxlesComboBox.SelectedItem = null;
+            payloadCapacityTextBox.Clear();
+            wheelFormulaComboBox.SelectedItem = null;
+        }
+
         private void DisplayCarData(Car vehicle)
         {
             comboBoxType.Text = vehicle.VehicleType;
@@ -316,5 +312,9 @@ namespace Database
             }
         }
 
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            ClearData();
+        }
     }
 }
