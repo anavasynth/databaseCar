@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Database"
         mc:Ignorable="d"
-        Title="DeleteWindow" Height="400" Width="480">
+        Title="DeleteWindow" Height="429" Width="600">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF3C8DE8"/>
@@ -13,16 +13,16 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid Margin="0,31,0,-31">
-        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="69" Click="BackButton_Click" Margin="14,316,0,0"/>
-        <Button x:Name="DeleteObject" Content="Видалити з бази" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="DeleteObject_Click"/>
+        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="69" Click="BackButton_Click" Margin="12,333,0,0"/>
+        <Button x:Name="DeleteObject" Content="Видалити з бази" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Width="520" Height="25" Click="DeleteObject_Click"/>
 
-        <ListView x:Name="carListViewDelete"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="95,3,94,216" RenderTransformOrigin="0.5,0.5">
+        <ListView x:Name="carListViewDelete"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="26,-3,26,128" RenderTransformOrigin="0.5,0.5">
             <ListView.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="0.368"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.777"/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="0" X="0"/>
                 </TransformGroup>
             </ListView.RenderTransform>
             <ListView.View>

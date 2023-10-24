@@ -29,7 +29,7 @@ namespace Database
             InitializeComponent();
             carDatabase = new CarDatabase("carData.txt");
             carsCollection = new ObservableCollection<Vehicle>(carDatabase.GetAllVehicles());
-            carListView1.ItemsSource =  carsCollection;   
+            //carListView1.ItemsSource =  carsCollection;   
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +53,14 @@ namespace Database
                     Car car = new Car(vehicleType, brand, model, color, year, mileage, fuel, gearbox, driveType, power);
                     carDatabase.AddVehicle(car);
                     carsCollection.Add(car);
+
+                    List<Vehicle> carList = (List<Vehicle>)carListView1.ItemsSource;
+                    if (carList == null)
+                    {
+                        carList = new List<Vehicle>();
+                    }
+                    carList.Add(car);
+                    carListView1.ItemsSource = carList;
                 }
                 else if (vehicleType == "Вантажівка")
                 {
@@ -62,19 +70,18 @@ namespace Database
                     Lorry lorry = new Lorry(vehicleType, brand, model, color, year, mileage, fuel, gearbox, driveType, power, numberOfAxles, payloadCapacity, wheelFormula);
                     carDatabase.AddVehicle(lorry);
                     carsCollection.Add(lorry);
+
+                    List<Vehicle> carList = (List<Vehicle>)carListView1.ItemsSource;
+                    if (carList == null)
+                    {
+                        carList = new List<Vehicle>();
+                    }
+                    carList.Add(lorry);
+                    carListView1.ItemsSource = carList;
                 }
 
-                comboBoxType.SelectedItem = null;
-                brandTextBox.Clear();
-                modelTextBox.Clear();
-                colorTextBox.Clear();
-                yearTextBox.Clear();
-                mileageTextBox.Clear();
-                fuelTextBox.SelectedItem = null;
-                gearboxComboBox.SelectedItem = null;
-                driveTypeComboBox.SelectedItem = null;
-                powerTextBox.Clear();
 
+                ClearAll();
             }    
         }
 
@@ -235,14 +242,26 @@ namespace Database
             return pass;
         }
 
+        private void ClearAll()
+        {
+            comboBoxType.SelectedItem = null;
+            brandTextBox.Clear();
+            modelTextBox.Clear();
+            colorTextBox.Clear();
+            yearTextBox.Clear();
+            mileageTextBox.Clear();
+            fuelTextBox.SelectedItem = null;
+            gearboxComboBox.SelectedItem = null;
+            driveTypeComboBox.SelectedItem = null;
+            powerTextBox.Clear();
+            numberOfAxlesComboBox.SelectedItem = null;
+            payloadCapacityTextBox.Clear();
+            wheelFormulaComboBox.SelectedItem = null;
+        }
+
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-           if (carListView1.SelectedItem != null)
-            {
-                Car selectedCar = (Car)carListView1.SelectedItem;
-                carDatabase.RemoveVehicle(selectedCar);
-                carsCollection.Remove(selectedCar);
-            }
+            ClearAll();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -252,15 +271,5 @@ namespace Database
             Close();
         }
 
-      /* private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            carDatabase.SortCarsByYear(false);
-            carsCollection.Clear();
-            List<Car> sortedCars = carDatabase.GetCars();
-            foreach (Car car in sortedCars)
-            {
-                carsCollection.Add(car);
-            }
-        }*/
     }
 }

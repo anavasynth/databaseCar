@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Database"
         mc:Ignorable="d"
-        Title="Довідник автомобілів" Height="500" Width="642" Foreground="#FF561717">
+        Title="Довідник автомобілів" Height="600" Width="642" Foreground="#FF561717">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FFD923ED"/>
@@ -22,7 +22,7 @@
             <ComboBoxItem Content="Легковий"/>
             <ComboBoxItem Content="Вантажівка"/>
         </ComboBox>
-        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Margin="24,433,0,0" VerticalAlignment="Top" Width="69" Click="BackButton_Click"/>
+        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Margin="30,522,0,0" VerticalAlignment="Top" Width="69" Click="BackButton_Click"/>
         <Label Content="Тип транспорту *" HorizontalAlignment="Left" Margin="21,12,0,0" VerticalAlignment="Top"/>
         <Label Content="Марка *" HorizontalAlignment="Left" Margin="21,73,0,0" VerticalAlignment="Top"/>
         <Label Content="Модель *" HorizontalAlignment="Left" Margin="21,133,0,0" VerticalAlignment="Top"/>
@@ -75,15 +75,15 @@
         <Label Content="Колісна формула" HorizontalAlignment="Left" Margin="442,196,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="payloadCapacityTextBox" HorizontalAlignment="Left" Margin="445,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="22" />
         <Label Content="Параметри тільки&#xA;  для вантажівок" HorizontalAlignment="Left" Margin="444,15,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="167" Height="54" FontStretch="Medium" FontSize="16"/>
-        <Button x:Name="AddButton" Content="Додати до бази" HorizontalAlignment="Left" Margin="464,379,0,0" VerticalAlignment="Top" Height="28" Width="126" RenderTransformOrigin="-0.152,0.276" Click="AddButton_Click"/>
-        <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="466,346,0,0" VerticalAlignment="Top" Height="28" Width="124" RenderTransformOrigin="-0.152,0.276" Background="#FFF59A9A" Click="ClearButton_Click"/>
-        <ListView x:Name="carListView1"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="200,286,209,41" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="AddButton" Content="Додати до бази" HorizontalAlignment="Left" Margin="229,414,0,0" VerticalAlignment="Top" Height="28" Width="277" RenderTransformOrigin="-0.152,0.276" Click="AddButton_Click"/>
+        <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="517,414,0,0" VerticalAlignment="Top" Height="28" Width="78" RenderTransformOrigin="-0.152,0.276" Background="#FFF59A9A" Click="ClearButton_Click"/>
+        <ListView x:Name="carListView1"  d:ItemsSource="{d:SampleData ItemCount=5}" Margin="204,272,31,179" RenderTransformOrigin="0.5,0.5">
             <ListView.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="0.368"/>
+                    <SkewTransform AngleY="0"/>
                     <RotateTransform/>
-                    <TranslateTransform Y="0.777"/>
+                    <TranslateTransform Y="0"/>
                 </TransformGroup>
             </ListView.RenderTransform>
             <ListView.View>
@@ -92,6 +92,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="487,274,0,0" VerticalAlignment="Top" Width="76"/>
     </Grid>
 </Window>

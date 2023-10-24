@@ -19,68 +19,6 @@ using System.Xml.Serialization;
 
 namespace Database
 {
-
-    /*  public class Car
-      {
-          private string vehicleType;
-          private string brand; 
-          private string model;
-          private string color;
-          private int year;
-          private double mileage;
-
-          public Car(string vehicleType, string brand, string model, string color, int year, double mileage) 
-          {
-              this.VehicleType = vehicleType;
-              this.Brand = brand;
-              this.Model = model;
-              this.Color = color;
-              this.Year = year;
-              this.Mileage = mileage;
-          }
-          public string VehicleType
-          {
-              get { return vehicleType; }
-              set { vehicleType = value; }
-          }
-          public string Brand
-          {
-              get { return brand; }
-              set { brand = value; }
-          }
-
-          public string Model
-          {
-              get { return model; }
-              set { model = value; }
-          }
-
-          public string Color
-          {
-              get { return color; }
-              set { color = value; }
-          }
-
-          public int Year
-          {
-              get { return year; }
-              set { year = value; }
-          }
-
-          public double Mileage
-          {
-              get { return mileage; }
-              set { mileage = value; }
-          }
-
-          public override string ToString() 
-          {
-              return $"Vehicle type: {VehicleType}, {Year} {Brand} {Model}, Color: {Color},\n Mileage: {Mileage}";
-          }
-      }
-      */
-
-
     public abstract class Vehicle
     {
         protected string vehicleType;
@@ -231,7 +169,17 @@ namespace Database
         }
     }
 
-    public class CarDatabase
+    public interface IVehicleDatabase
+    {
+        List<Vehicle> SearchCarsByBrand(string brand);
+        List<Vehicle> SearchCarsByFuel(string fuel);
+        List<Vehicle> SearchCarsByType(string vehicleType);
+        List<Vehicle> SearchCarsByYearRange(int startYear, int endYear);
+        List<Vehicle> SearchCarsByMileageRange(double startMileage, double endMileage);
+        List<Vehicle> SearchSportsCarsByPowerInKW(double minPowerInKW);
+    }
+
+    public class CarDatabase : IVehicleDatabase
     {
         private List<Vehicle> vehicles = new List<Vehicle>();
         private string filePath;
@@ -264,7 +212,6 @@ namespace Database
             {
                 vehicles.Sort((car1, car2) => car2.Year.CompareTo(car1.Year));
             }
-            //SaveData();
         }
 
         public void SortCarsByMileage(bool ascending = true)
@@ -277,7 +224,6 @@ namespace Database
             {
                 vehicles.Sort((car1, car2) => car2.Mileage.CompareTo(car1.Mileage));
             }
-            //SaveData();
         }
 
         public List<Vehicle> SearchCarsByBrand(string brand)
@@ -298,6 +244,16 @@ namespace Database
         public List<Vehicle> SearchCarsByYearRange(int startYear, int endYear)
         {
             return vehicles.FindAll(car => car.Year >= startYear && car.Year <= endYear);
+        }
+
+        public List<Vehicle> SearchCarsByMileageRange(double startMileage, double endMileage)
+        {
+            return vehicles.Where(car => car.Mileage >= startMileage && car.Mileage <= endMileage).ToList();
+        }
+
+        public List<Vehicle> SearchSportsCarsByPowerInKW(double minPowerInKW)
+        {
+            return vehicles.Where(car => car is Car && car.Power >= minPowerInKW).ToList();
         }
 
         public void EditVehicle(Vehicle oldVehicle, Vehicle newVehicle)
@@ -382,8 +338,6 @@ namespace Database
         }
     }
 
-
-
         public partial class MainWindow : Window
         {
             private CarDatabase carDatabase;
@@ -394,7 +348,7 @@ namespace Database
                 InitializeComponent();
                 carDatabase = new CarDatabase("carData.txt");
                 carsCollection = new ObservableCollection<Vehicle>(carDatabase.GetAllVehicles());
-                //searchResultListView.ItemsSource = carsCollection;
+
 
                 ImageBrush imageBrush = new ImageBrush();
                 imageBrush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("C:\\Users\\gonch\\Downloads\\camar.jpg"));
@@ -492,6 +446,51 @@ namespace Database
                 MessageBox.Show("Сталася помилка: " + ex.Message);
             }
         }
+
+        private void FindCarByMileageRange_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double startMileage, endMileage;
+                if (double.TryParse(startMileageT.Text, out startMileage) && double.TryParse(endMileageT.Text, out endMileage))
+                {
+                    if (startMileage <= 0 || endMileage <= 0)
+                    {
+                        MessageBox.Show("Пробіг має бути більше за нуль.");
+                        return;
+                    }
+
+                    if (startMileage > endMileage)
+                    {
+                        MessageBox.Show("Початковий пробіг не може бути більшим за кінцевий.");
+                        return;
+                    }
+
+                    List<Vehicle> searchResults = carDatabase.SearchCarsByMileageRange(startMileage, endMileage);
+                    searchResultListView.ItemsSource = searchResults;
+                }
+                else
+                {
+                    MessageBox.Show("Невірний формат введеного пробігу. Будь ласка, введіть числове значення.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Сталася помилка: " + ex.Message);
+            }
+        }
+
+        private void SearchSportsCarsByPower_Click(object sender, RoutedEventArgs e)
+        {
+            double minPowerInKW = 3000;
+
+            List<Vehicle> searchResults = carDatabase.SearchSportsCarsByPowerInKW(minPowerInKW);
+            searchResultListView.ItemsSource = searchResults;
+        }
+
+
+
+
     }
-    
+
 }
