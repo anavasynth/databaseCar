@@ -30,5 +30,30 @@ namespace Database
             mainWindow.Show();
             Close();
         }
+
+        private void HowToAdd_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ЗДАРОВА НЄФАР");
+        }
+
+        private void HowToShowData_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HowToEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HowToDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HoToUseAddFunctions_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

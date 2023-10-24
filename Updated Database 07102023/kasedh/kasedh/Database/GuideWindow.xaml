@@ -5,9 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Database"
         mc:Ignorable="d"
-        Title="GuideWindow" Height="450" Width="800">
+        Title="GuideWindow" Height="594" Width="1148">
     <Grid>
-        <Button x:Name="BackButton" Content="Button" HorizontalAlignment="Left" Margin="37,357,0,0" VerticalAlignment="Top" Width="139" Height="42" Click="BackButton_Click"/>
-
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD923ED"/>
+                <GradientStop Color="#FFEFECEC" Offset="1"/>
+                <GradientStop Color="#FFBD2DF5"/>
+                <GradientStop Color="#FF246CCD"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="69" Click="BackButton_Click" Margin="38,514,0,0"/>
+        <Label Content="Посібник користувача" HorizontalAlignment="Center" Margin="0,8,0,0" VerticalAlignment="Top" Height="68" Width="382" FontSize="36"/>
+        <Label Content="Даний застосунок є системою управління базою даних 'Довідник автомобілів'" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top" Height="50" Width="882" FontSize="24"/>
+        <Button x:Name="HowToAdd" Content="Як додати об'єкт до бази даних?" HorizontalAlignment="Center" Margin="0,138,0,0" VerticalAlignment="Top" Height="52" Width="882" FontSize="16" Click="HowToAdd_Click" Background="#B2DDDDDD"/>
+        <Button x:Name="HowToShowData" Content="Як переглянути вміст бази даних?" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Height="52" Width="882" FontSize="16" Click="HowToShowData_Click" Background="#B2DDDDDD"/>
+        <Button x:Name="HowToEdit" Content="Як редагувати дані об'єкта бази даних?" HorizontalAlignment="Center" VerticalAlignment="Top" Height="52" Width="882" FontSize="16" Margin="0,269,0,0" Click="HowToEdit_Click" Background="#B2DDDDDD"/>
+        <Button x:Name="HowToDelete" Content="Як вилучити об'єкт із бази даних?" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" Height="52" Width="882" FontSize="16" Click="HowToDelete_Click" Background="#B2DDDDDD"/>
+        <Button x:Name="HoToUseAddFunctions" Content="Як користуватись додатковими функціями бази даних?" HorizontalAlignment="Center" Margin="0,401,0,0" VerticalAlignment="Top" Height="52" Width="882" FontSize="16" Click="HoToUseAddFunctions_Click" Background="#B2DDDDDD"/>
     </Grid>
 </Window>
