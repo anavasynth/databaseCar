@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Database"
         mc:Ignorable="d"
-        Title="ShowWindow" Height="722" Width="720">
+        Title="Довідник автомобілів" Height="722" Width="720">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF6272F3" Offset="0.319"/>
