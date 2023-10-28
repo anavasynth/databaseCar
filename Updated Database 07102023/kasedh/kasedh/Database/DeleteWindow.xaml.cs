@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Database
 {
-    /// <summary>
-    /// Логика взаимодействия для DeleteWindow.xaml
-    /// </summary>
     public partial class DeleteWindow : Window
     {
         private CarDatabase carDatabase;
@@ -37,23 +34,15 @@ namespace Database
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void DeleteObject_Click(object sender, RoutedEventArgs e)
         {       
             if (carListViewDelete.SelectedItem != null)
             {
-               // Car selectedCar = (Car)carListViewDelete.SelectedItem;
-              //  carDatabase.RemoveCar(selectedCar);
-
                 Vehicle selectedCar = (Vehicle)carListViewDelete.SelectedItem;
                 carDatabase.RemoveVehicle(selectedCar); // Видалення автомобіля з бази даних
                 carsCollection.Remove(selectedCar); // Видалення автомобіля з колекції
-
             }
+            MessageBox.Show("Об'є́кт вилучено");
         }
     }
 }

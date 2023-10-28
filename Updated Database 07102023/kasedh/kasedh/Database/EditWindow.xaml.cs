@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Database
 {
-    /// <summary>
-    /// Логика взаимодействия для EditWindow.xaml
-    /// </summary>
     public partial class EditWindow : Window
     {
         private CarDatabase carDatabase;
@@ -37,8 +34,8 @@ namespace Database
             Close();
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        { 
           if (carListView.SelectedItem != null && CheckValues())
             {
                 
@@ -89,6 +86,7 @@ namespace Database
 
                     ClearData();
                 }
+                MessageBox.Show("Зміни внесено");
             }
         }
 

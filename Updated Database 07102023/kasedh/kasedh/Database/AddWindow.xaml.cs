@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace Database
 {
-    /// <summary>
-    /// Логика взаимодействия для AddWindow.xaml
-    /// </summary>
     public partial class AddWin : Window
     {
         private CarDatabase carDatabase;
@@ -28,8 +25,7 @@ namespace Database
         {
             InitializeComponent();
             carDatabase = new CarDatabase("carData.txt");
-            carsCollection = new ObservableCollection<Vehicle>(carDatabase.GetAllVehicles());
-            //carListView1.ItemsSource =  carsCollection;   
+            carsCollection = new ObservableCollection<Vehicle>(carDatabase.GetAllVehicles()); 
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -82,6 +78,7 @@ namespace Database
 
 
                 ClearAll();
+                MessageBox.Show("Об'є́кт додано");
             }    
         }
 

@@ -391,7 +391,6 @@ namespace Database
                       searchResultListView.ItemsSource = searchResults;
                   }
 
-
         }
         private void FindElectroCar_Click(object sender, RoutedEventArgs e)
         {
@@ -472,15 +471,11 @@ namespace Database
 
         private void SearchSportsCarsByPower_Click(object sender, RoutedEventArgs e)
         {
-            double minPowerInKW = 3000;
+            double minPowerInKW = 300;
 
             List<Vehicle> searchResults = carDatabase.SearchSportsCarsByPowerInKW(minPowerInKW);
             searchResultListView.ItemsSource = searchResults;
         }
 
-
-
-
     }
-
 }

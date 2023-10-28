@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Database
 {
-    /// <summary>
-    /// Логика взаимодействия для ShowWindow.xaml
-    /// </summary>
     public partial class ShowWindow : Window
     {
         private CarDatabase carDatabase;
@@ -80,9 +77,6 @@ namespace Database
             {
                 carListView.ItemsSource = carsCollection;
             }
-
-
-
         }
     }
 }

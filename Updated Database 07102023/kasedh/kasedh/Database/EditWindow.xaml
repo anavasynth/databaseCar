@@ -72,7 +72,7 @@
         <Label Content="Колісна формула" HorizontalAlignment="Left" Margin="448,206,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="payloadCapacityTextBox" HorizontalAlignment="Left" Margin="451,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="22" />
         <Label Content="Параметри тільки&#xA;  для вантажівок" HorizontalAlignment="Left" Margin="450,25,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="167" Height="54" FontStretch="Medium" FontSize="16"/>
-        <Button x:Name="AddButton" Content="Редагувати" HorizontalAlignment="Left" Margin="306,481,0,0" VerticalAlignment="Top" Height="28" Width="126" RenderTransformOrigin="-0.152,0.276" Click="AddButton_Click"/>
+        <Button x:Name="AddButton" Content="Редагувати" HorizontalAlignment="Left" Margin="306,481,0,0" VerticalAlignment="Top" Height="28" Width="126" RenderTransformOrigin="-0.152,0.276" Click="EditButton_Click"/>
         <Button x:Name="ClearButton" Content="Очистити" HorizontalAlignment="Left" Margin="449,481,0,0" VerticalAlignment="Top" Height="28" Width="124" RenderTransformOrigin="-0.152,0.276" Background="#FFF59A9A" Click="ClearButton_Click"/>
         <ListView x:Name="carListView" av:ItemsSource="{av:SampleData ItemCount=5}" Margin="209,284,51,109" MouseDoubleClick="carListView_MouseDoubleClick">
             <ListView.View>
