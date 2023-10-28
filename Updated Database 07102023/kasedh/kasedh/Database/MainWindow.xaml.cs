@@ -125,7 +125,7 @@ namespace Database
 
         public override string GetVehicleInfo()
         {
-            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Колір: {Color},\n Пробіг: {Mileage}, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power}";
+            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Колір: {Color},\nПробіг: {Mileage}, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power}";
         }
     }
 
@@ -164,7 +164,7 @@ namespace Database
 
         public override string GetVehicleInfo()
         {
-            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Color: {Color}, Mileage: {Mileage}," +
+            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Color: {Color}, Mileage: {Mileage}, Колір: {Color},\nПробіг: {Mileage}, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power}" +
                    $" Number of Axles: {NumberOfAxles}, Payload Capacity: {PayloadCapacity}, Wheel Formula: {WheelFormula}";
         }
     }
@@ -268,16 +268,6 @@ namespace Database
         public List<Vehicle> GetAllVehicles()
         {
             return vehicles;
-        }
-
-        public List<Car> GetAllCars()
-        {
-            return vehicles.OfType<Car>().ToList();
-        }
-
-        public List<Lorry> GetAllLorries()
-        {
-            return vehicles.OfType<Lorry>().ToList();
         }
 
         private void LoadData()
