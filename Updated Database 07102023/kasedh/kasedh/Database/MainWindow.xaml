@@ -43,8 +43,6 @@
         <Label Content="До" HorizontalAlignment="Left" Margin="328,571,0,0" VerticalAlignment="Top" Height="25" Background="#00802A2A" FontSize="12"/>
         <Label Content="Пробіг" HorizontalAlignment="Left" Margin="249,541,0,0" VerticalAlignment="Top" Height="34" Background="#00802A2A" FontSize="16"/>
         <Button x:Name="SearchSportsCarsByPower" Content="Відобразити спорткари" HorizontalAlignment="Left" Height="32" Margin="58,717,0,0" VerticalAlignment="Top" Width="169" Click="SearchSportsCarsByPower_Click"/>
-
-
     </Grid>
 </Window>
     

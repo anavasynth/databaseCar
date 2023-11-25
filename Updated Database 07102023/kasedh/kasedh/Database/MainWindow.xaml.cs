@@ -125,7 +125,7 @@ namespace Database
 
         public override string GetVehicleInfo()
         {
-            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Колір: {Color},\nПробіг: {Mileage}, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power}";
+            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Колір: {Color},\nПробіг: {Mileage} тис. км, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power} кВт";
         }
     }
 
@@ -164,8 +164,8 @@ namespace Database
 
         public override string GetVehicleInfo()
         {
-            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Color: {Color}, Mileage: {Mileage}, Колір: {Color},\nПробіг: {Mileage}, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power}" +
-                   $" Number of Axles: {NumberOfAxles}, Payload Capacity: {PayloadCapacity}, Wheel Formula: {WheelFormula}";
+            return $"Тип транспорту: {VehicleType}, {Year} {Brand} {Model}, Колір: {Color},\nПробіг: {Mileage} тис. км, Паливо: {Fuel}, КПП: {Gearbox}, Тип приводу: {DriveType}, Потужність: {Power} кВт" +
+                   $", Кількість осей: {NumberOfAxles}, Вантажопідйомність: {PayloadCapacity} т, Колісна формула: {WheelFormula}";
         }
     }
 
